@@ -6,22 +6,27 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'edkolev/tmuxline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'https://github.com/joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
+Plug 'tomlion/vim-solidity'
+Plug 'rust-lang/rust.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'chriskempson/base16-vim'
+Plug 'preservim/nerdtree'
+Plug 'RRethy/nvim-base16'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'itchyny/lightline.vim'
+Plug 'dracula/vim'
 
 call plug#end()
 
 " Treesitter configuration
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+  ensure_installed = "all",
+  sync_install = false,
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = false,
     custom_captures = {
         ["keyword.operator"] = "Keyword",
         ["operator"] = "Keyword",
@@ -69,10 +74,16 @@ set shortmess+=c
 set termguicolors
 
 " Theme config
-colorscheme flavours
+let g:dracula_italic = 0
+colorscheme dracula
+
+let g:lightline = {
+      \ 'colorscheme': 'dracula',
+      \ }
 
 " Run goimports along gofmt on each save
 let g:go_fmt_command = "gofmt"
+let g:rustfmt_autosave = 1
 
 nnoremap gsv :so $MYVIMRC<CR>
 
@@ -80,6 +91,11 @@ nnoremap gsv :so $MYVIMRC<CR>
 "highlight clear SignColumn
 highlight LineNr guibg=NONE
 highlight SignColumn guibg=NONE
+
+"nnoremap <leader>n :NERDTreeFocus<CR>
+"nnoremap <C-n> :NERDTree<CR>
+nnoremap <leader>tr :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>
 
 " Cocvim configuration
 set updatetime=300
