@@ -2,6 +2,7 @@ local opt = vim.opt
 local g = vim.g
 local cmd = vim.cmd
 
+
 -- Tab settings
 opt.expandtab = true
 opt.tabstop = 4
@@ -17,7 +18,8 @@ opt.wrap = false
 opt.smartcase = true
 opt.swapfile = false
 opt.backup = false
-opt.undodir = "~/.nvim/undodir"
+
+--opt.undodir = "~/.nvim/undodir"
 opt.undofile = true
 opt.incsearch = true
 opt.hidden = true
