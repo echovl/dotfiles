@@ -6,8 +6,6 @@ end
 
 return require("packer").startup(function()
   use "wbthomason/packer.nvim"
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use "neovim/nvim-lspconfig"
   use "edkolev/tmuxline.vim"
   use "christoomey/vim-tmux-navigator"
   use "tomlion/vim-solidity"
@@ -19,11 +17,32 @@ return require("packer").startup(function()
   use "neovimhaskell/haskell-vim"
   use "itchyny/lightline.vim"
 
-  use "windwp/nvim-autopairs"
-  use { "jose-elias-alvarez/null-ls.nvim" , requires = { "nvim-lua/plenary.nvim" } }
-  use "ray-x/lsp_signature.nvim"
+  use { 
+      "nvim-treesitter/nvim-treesitter", 
+      run = ":TSUpdate", 
+      config = conf "treesitter" 
+  }
 
-  use { "hrsh7th/nvim-cmp", 
+  use {
+      "williamboman/nvim-lsp-installer", 
+      {
+          "neovim/nvim-lspconfig",
+          config = conf "lsp",
+      }
+  }
+
+  use { "windwp/nvim-autopairs", config = conf "autopairs" }
+
+  use { 
+      "jose-elias-alvarez/null-ls.nvim" , 
+      requires = { "nvim-lua/plenary.nvim" } ,
+      config = conf "null",
+  }
+
+  use { "ray-x/lsp_signature.nvim", config = conf "lsp-signature" }
+
+  use { 
+    "hrsh7th/nvim-cmp", 
     config = conf "nvim-cmp",
     requires = {
       "hrsh7th/cmp-nvim-lsp",
