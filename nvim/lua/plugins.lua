@@ -13,7 +13,7 @@ return require("packer").startup(function()
   use {"junegunn/fzf", run = function() vim.fn["fzf#install"]() end }
   use "junegunn/fzf.vim"
   use "preservim/nerdtree"
-  use "RRethy/nvim-base16"
+  use "echovl/nvim-base16"
   use "neovimhaskell/haskell-vim"
   use "itchyny/lightline.vim"
 

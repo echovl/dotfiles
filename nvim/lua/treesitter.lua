@@ -6,10 +6,6 @@ return function()
         enable = true,
         additional_vim_regex_highlighting = false,
         custom_captures = {
-            ["keyword.operator"] = "Keyword",
-            ["operator"] = "Keyword",
-            ["include"] = "Keyword",
-            ["repeat"] = "Keyword"
         }
       },
       indent = { enable = false },
