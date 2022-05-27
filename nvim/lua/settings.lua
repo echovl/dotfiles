@@ -2,7 +2,6 @@ local opt = vim.opt
 local g = vim.g
 local cmd = vim.cmd
 
-
 -- Tab settings
 opt.expandtab = true
 opt.tabstop = 4
@@ -29,10 +28,10 @@ opt.termguicolors = true
 opt.updatetime = 300
 
 -- Color theme settings
-g.dracula_italic = 0
-g.lightline = { colorscheme = "dracula" }
+--g.dracula_italic = 0
+g.lightline = { colorscheme = "gruvbox" }
 
-cmd "colorscheme dracula"
+cmd("colorscheme dracula")
 
-cmd "highlight LineNr guibg=NONE"
-cmd "highlight SignColumn guibg=NONE"
+cmd("highlight LineNr guibg=NONE")
+cmd("highlight SignColumn guibg=NONE")
