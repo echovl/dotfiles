@@ -1,7 +1,7 @@
 window:
   padding:
     x: 10
-    y: 5
+    y: 8
 font:
   normal:
     family: "JetBrains Mono"
@@ -11,8 +11,8 @@ font:
     style: Regular
   italic:
     family: "JetBrains Mono"
-    style: Italic
-  size: 9.5
+    style: Regular
+  size: 9
 
 # Start flavours
 # Base16 Dracula 256 - alacritty color config

@@ -7,7 +7,6 @@ end
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("edkolev/tmuxline.vim")
-	use("christoomey/vim-tmux-navigator")
 	use("tomlion/vim-solidity")
 	use("rust-lang/rust.vim")
 	use({
