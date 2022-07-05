@@ -6,7 +6,7 @@ return function()
 			enable = true,
 		},
 		incremental_selection = {
-			enable = true,
+			enable = false,
 		},
 	})
 end

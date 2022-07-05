@@ -5,6 +5,9 @@ end
 vim.g.mapleader = " "
 
 map("n", "<leader>gsv", ":so " .. vim.env.MYVIMRC .. "<CR>")
-
 map("n", "<leader>tr", ":NERDTreeToggle<CR>")
-map("n", "<C-p>", ":GFiles<CR>")
+map("n", "<C-p>",  '<cmd>lua require("telescope.builtin").git_files()<CR>')
+map("n", "<leader>pf",  '<cmd>lua require("telescope.builtin").find_files()<CR>')
+map("n", "<leader>ps",  '<cmd>lua require("telescope.builtin").grep_string()<CR>')
+map("n", "<leader>j",  ':cnext<CR>')
+map("n", "<leader>k",  ':cprev<CR>')

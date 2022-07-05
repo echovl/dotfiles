@@ -9,18 +9,16 @@ return require("packer").startup(function()
 	use("edkolev/tmuxline.vim")
 	use("tomlion/vim-solidity")
 	use("rust-lang/rust.vim")
-	use({
-		"junegunn/fzf",
-		run = function()
-			vim.fn["fzf#install"]()
-		end,
-	})
-	use("junegunn/fzf.vim")
 	use("preservim/nerdtree")
 	use("neovimhaskell/haskell-vim")
 	use("tpope/vim-commentary")
 	use("tpope/vim-fugitive")
-	--use("itchyny/lightline.vim")
+
+    use ({
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    })
+
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
