@@ -22,6 +22,7 @@ return function()
             null_ls.builtins.diagnostics.eslint,
 			null_ls.builtins.formatting.autopep8,
 			null_ls.builtins.formatting.stylua,
+            null_ls.builtins.formatting.sql_formatter
 		},
 		-- you can reuse a shared lspconfig on_attach callback here
 		on_attach = function(client, bufnr)
