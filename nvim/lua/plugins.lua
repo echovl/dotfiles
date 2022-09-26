@@ -60,4 +60,5 @@ return require("packer").startup(function()
 	})
 
 	use("dracula/vim")
+    use { "ellisonleao/gruvbox.nvim" }
 end)
