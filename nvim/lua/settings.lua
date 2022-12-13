@@ -9,6 +9,7 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.autoindent = true
 
+
 -- General settings
 opt.errorbells = false
 opt.number = true
@@ -22,16 +23,13 @@ opt.backup = false
 opt.undofile = true
 opt.incsearch = true
 opt.hidden = true
-opt.cmdheight = 2
+opt.cmdheight = 1
 opt.shortmess:append({ c = true })
 opt.termguicolors = true
 opt.updatetime = 300
 
 -- Color theme settings
---g.dracula_italic = 0
-g.lightline = { colorscheme = "gruvbox" }
-
-cmd("colorscheme dracula")
+cmd("colorscheme gruvbox")
 
 cmd("highlight LineNr guibg=NONE")
 cmd("highlight SignColumn guibg=NONE")

@@ -27,7 +27,7 @@ return function()
 	end
 	local gopathmod = gopath .. "/pkg/mod"
 
-	local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+	local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 	local lsp_install = require("nvim-lsp-installer")
 
 	lsp_install.setup({
@@ -85,7 +85,7 @@ return function()
 
 	-- Use a loop to conveniently call 'setup' on multiple servers and
 	-- map buffer local keybindings when the language server attaches
-	local servers = { "tsserver", "pyright" }
+	local servers = { "tsserver", "pyright" , "solc", "jsonls"}
 	for _, lsp in pairs(servers) do
 		require("lspconfig")[lsp].setup({
 			on_attach = on_attach,

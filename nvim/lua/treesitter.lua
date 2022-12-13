@@ -4,9 +4,10 @@ return function()
 		sync_install = false,
 		highlight = {
 			enable = true,
+            additional_vim_regex_highlighting = false,
 		},
-		incremental_selection = {
-			enable = false,
-		},
+        indent= {
+            enable = false,
+        }
 	})
 end

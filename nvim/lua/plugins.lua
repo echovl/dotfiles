@@ -9,7 +9,6 @@ return require("packer").startup(function()
 	use("edkolev/tmuxline.vim")
 	use("tomlion/vim-solidity")
 	use("rust-lang/rust.vim")
-	use("preservim/nerdtree")
 	use("neovimhaskell/haskell-vim")
 	use("tpope/vim-commentary")
 	use("tpope/vim-fugitive")
@@ -19,12 +18,38 @@ return require("packer").startup(function()
         requires = { {'nvim-lua/plenary.nvim'} }
     })
 
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+    -- tree
+	use { 
+        'kyazdani42/nvim-tree.lua', 
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = conf("tree"),
+    }
+
+    -- bufferline
+	-- use {
+        -- 'akinsho/bufferline.nvim', tag = "v2.*", 
+        -- requires = 'kyazdani42/nvim-web-devicons',
+        -- config = conf("bufferlineconf"),
+    -- }
+
+    -- lualine
+
+    use ({
+        'nvim-lualine/lualine.nvim',
+        config = conf("lualineconf"),
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    })
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 		config = conf("treesitter"),
 	})
+
+    -- devicons	
+	use ('kyazdani42/nvim-web-devicons')
 
 	use({
 		"williamboman/nvim-lsp-installer",
@@ -33,6 +58,8 @@ return require("packer").startup(function()
 			config = conf("lsp"),
 		},
 	})
+
+    use({ "Vimjas/vim-python-pep8-indent" })
 
 	use({ "windwp/nvim-autopairs", config = conf("autopairs") })
 
@@ -59,6 +86,8 @@ return require("packer").startup(function()
 		},
 	})
 
+    -- themes
 	use("dracula/vim")
     use { "ellisonleao/gruvbox.nvim" }
+    use 'navarasu/onedark.nvim'
 end)
