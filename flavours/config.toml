@@ -35,7 +35,7 @@ hook = 'polybar-msg cmd restart &'
 
 [[item]]
 file = '~/.config/nvim/colors/flavours.lua'
-template = 'vim'
+template = 'nvim'
 rewrite = true
 hook = "reloadnvim"
 
@@ -44,3 +44,16 @@ file = '~/.config/rofi/colors.rasi'
 template = 'rofi'
 subtemplate = 'colors'
 rewrite = true
+
+# [[item]]
+# file = "~/.themes/FlatColor/colors3"
+# template = "gtk-flatcolor"
+# subtemplate = "gtk-3"
+# rewrite = true
+# hook = "systemctl restart --user xsettingsd"
+
+# [[item]]
+# file = "~/.themes/FlatColor/colors2"
+# template = "gtk-flatcolor"
+# subtemplate = "gtk-2"
+# rewrite = true
