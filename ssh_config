@@ -1,0 +1,23 @@
+# Personal
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
+# Gitlab monkey
+Host gitlab.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/monkey_ed25519
+    IdentitiesOnly yes
+
+# Gitlab echovl
+Host gitlab-echovl
+    HostName gitlab.com
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
+# Imagewow
+Host imagewow
+    HostName box20.git.beanstalkapp.com
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
