@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Gruvbox dark, medium scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+-- Dracula scheme by Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-local gui00 = "#282828"
-local gui01 = "#3c3836"
-local gui02 = "#504945"
-local gui03 = "#665c54"
-local gui04 = "#bdae93"
-local gui05 = "#d5c4a1"
-local gui06 = "#ebdbb2"
-local gui07 = "#fbf1c7"
-local gui08 = "#fb4934"
-local gui09 = "#fe8019"
-local gui0A = "#fabd2f"
-local gui0B = "#b8bb26"
-local gui0C = "#8ec07c"
-local gui0D = "#83a598"
-local gui0E = "#d3869b"
-local gui0F = "#d65d0e"
+local gui00 = "#282936"
+local gui01 = "#3a3c4e"
+local gui02 = "#4d4f68"
+local gui03 = "#626483"
+local gui04 = "#62d6e8"
+local gui05 = "#e9e9f4"
+local gui06 = "#f1f2f8"
+local gui07 = "#f7f7fb"
+local gui08 = "#ea51b2"
+local gui09 = "#b45bcf"
+local gui0A = "#00f769"
+local gui0B = "#ebff87"
+local gui0C = "#a1efe4"
+local gui0D = "#62d6e8"
+local gui0E = "#b45bcf"
+local gui0F = "#00f769"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-gruvbox-dark-medium"
+vim.g.colors_name = "base16-dracula"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

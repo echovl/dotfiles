@@ -21,7 +21,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 100
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme dracula")
 
 vim.cmd("highlight LineNr guibg=NONE")
 vim.cmd("highlight SignColumn guibg=NONE")
