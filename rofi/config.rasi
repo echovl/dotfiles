@@ -1,7 +1,7 @@
 @import "~/.config/rofi/colors.rasi"
 
 configuration {
-  font: "JetBrains Mono Medium 16";
+  font: "JetBrainsMono Nerd Font 14";
 
   run {
     display-name: ">";
@@ -25,7 +25,7 @@ configuration {
 
 window {
   transparency: "real";
-  width: 800;
+  width: 700;
   border: 1px;
   border-color: @lightfg;
 }
