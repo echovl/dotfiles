@@ -60,7 +60,6 @@ return require("packer").startup(function(use)
 	})
 
 	use("ray-x/lsp_signature.nvim")
-	use("windwp/nvim-autopairs")
 
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
