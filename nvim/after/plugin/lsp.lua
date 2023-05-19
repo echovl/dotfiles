@@ -22,6 +22,7 @@ lsp.configure('lua_ls', {
     }
 })
 
+
 lsp.setup_nvim_cmp({
     sources = {
         { name = "nvim_lsp" },
