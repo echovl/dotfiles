@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Dracula scheme by Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+-- Rosé Pine Moon scheme by Emilia Dunfelt &lt;edun@dunfelt.se&gt;
 
-local gui00 = "#282936"
-local gui01 = "#3a3c4e"
-local gui02 = "#4d4f68"
-local gui03 = "#626483"
-local gui04 = "#62d6e8"
-local gui05 = "#e9e9f4"
-local gui06 = "#f1f2f8"
-local gui07 = "#f7f7fb"
-local gui08 = "#ea51b2"
-local gui09 = "#b45bcf"
-local gui0A = "#00f769"
-local gui0B = "#ebff87"
-local gui0C = "#a1efe4"
-local gui0D = "#62d6e8"
-local gui0E = "#b45bcf"
-local gui0F = "#00f769"
+local gui00 = "#232136"
+local gui01 = "#2a273f"
+local gui02 = "#393552"
+local gui03 = "#6e6a86"
+local gui04 = "#908caa"
+local gui05 = "#e0def4"
+local gui06 = "#e0def4"
+local gui07 = "#56526e"
+local gui08 = "#eb6f92"
+local gui09 = "#f6c177"
+local gui0A = "#ea9a97"
+local gui0B = "#3e8fb0"
+local gui0C = "#9ccfd8"
+local gui0D = "#c4a7e7"
+local gui0E = "#f6c177"
+local gui0F = "#56526e"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-dracula"
+vim.g.colors_name = "base16-rose-pine-moon"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })
