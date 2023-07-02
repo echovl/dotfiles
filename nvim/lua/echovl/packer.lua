@@ -6,7 +6,7 @@ vim.cmd.packadd("packer.nvim")
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	use("ThePrimeagen/vim-be-good")
+    use("ThePrimeagen/vim-be-good")
 
 	use("Vimjas/vim-python-pep8-indent")
 
@@ -15,8 +15,8 @@ return require("packer").startup(function(use)
 	use("tpope/vim-commentary")
 	use("tpope/vim-fugitive")
 
-    use("dracula/vim")
-    use({ "rose-pine/neovim", as = "rose-pine" })
+	use("dracula/vim")
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use("ellisonleao/gruvbox.nvim")
 	use("navarasu/onedark.nvim")
 
@@ -40,7 +40,7 @@ return require("packer").startup(function(use)
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
+        branch = "v1.x",
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
