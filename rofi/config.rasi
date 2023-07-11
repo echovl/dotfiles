@@ -3,9 +3,12 @@
 configuration {
   font: "JetBrainsMono Nerd Font 14";
 
-  run {
-    display-name: ">";
+  drun {
+    display-name: "";
   }
+
+  drun-display-format: "{name}";
+  show-icons: true;
 
   timeout {
     delay: 10;
@@ -28,6 +31,7 @@ window {
   width: 700;
   border: 1px;
   border-color: @lightfg;
+  border-radius: 10px;
 }
 
 mainbox {
@@ -55,7 +59,7 @@ listview {
 }
 
 element {
-  children: [element-text];
+  children: [element-icon, element-text];
 }
 
 element-text {
@@ -67,5 +71,6 @@ element-text selected {
 }
 
 element-icon {
-  padding: 10px 10px;
+  padding: 0px 10px 0px 10px;
+  size: 20px;
 }
