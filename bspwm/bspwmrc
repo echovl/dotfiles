@@ -27,6 +27,8 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
 
+bspc rule -a rofi border=on
+bspc config external_rules_command ~/.config/bspwm/external_rules
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
 #bspc rule -a Chromium desktop='^2'
 #bspc rule -a mplayer2 state=floating
