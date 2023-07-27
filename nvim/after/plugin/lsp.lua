@@ -32,6 +32,10 @@ lsp.configure("pylsp", {
 				pycodestyle = {
 					enabled = false,
 				},
+                mypy = {
+                    enabled = false,
+                    live_mode= true
+                }
 			},
 		},
 	},

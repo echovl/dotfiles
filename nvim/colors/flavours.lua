@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Rosé Pine Moon scheme by Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+-- Gruvbox dark, medium scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-local gui00 = "#232136"
-local gui01 = "#2a273f"
-local gui02 = "#393552"
-local gui03 = "#6e6a86"
-local gui04 = "#908caa"
-local gui05 = "#e0def4"
-local gui06 = "#e0def4"
-local gui07 = "#56526e"
-local gui08 = "#eb6f92"
-local gui09 = "#f6c177"
-local gui0A = "#ea9a97"
-local gui0B = "#3e8fb0"
-local gui0C = "#9ccfd8"
-local gui0D = "#c4a7e7"
-local gui0E = "#f6c177"
-local gui0F = "#56526e"
+local gui00 = "#282828"
+local gui01 = "#3c3836"
+local gui02 = "#504945"
+local gui03 = "#665c54"
+local gui04 = "#bdae93"
+local gui05 = "#d5c4a1"
+local gui06 = "#ebdbb2"
+local gui07 = "#fbf1c7"
+local gui08 = "#fb4934"
+local gui09 = "#fe8019"
+local gui0A = "#fabd2f"
+local gui0B = "#b8bb26"
+local gui0C = "#8ec07c"
+local gui0D = "#83a598"
+local gui0E = "#d3869b"
+local gui0F = "#d65d0e"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-rose-pine-moon"
+vim.g.colors_name = "base16-gruvbox-dark-medium"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })
