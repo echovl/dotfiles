@@ -22,10 +22,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 100
 
 vim.g.loaded_python3_provider = 0
-vim.loader.enable()
-
-vim.g.gruvbox_material_background = "medium"
-vim.cmd("colorscheme gruvbox-material")
 
 vim.cmd("highlight LineNr guibg=NONE")
 vim.cmd("highlight SignColumn guibg=NONE")
