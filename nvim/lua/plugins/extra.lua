@@ -8,6 +8,10 @@ return {
         lazy = false
     },
     {
+        "tpope/vim-sleuth",
+        lazy = false
+    },
+    {
         "tpope/vim-commentary",
         event = { "BufReadPost", "BufNewFile" }
     },
