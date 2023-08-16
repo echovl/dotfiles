@@ -3,9 +3,4 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-
-# Try 1.5 or 1.75
-GDK_DPI_SCALE=1.625
-
-# Thinkpad
-#GDK_DPI_SCALE=1.375
+GDK_DPI_SCALE=1
