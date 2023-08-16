@@ -1,0 +1,8 @@
+[defaults]
+format = "{time}\n"
+
+[[sessions]]
+id = "work"
+name = "Work"
+duration = "30m"
+command = "notify-send 'Work Done!'"
