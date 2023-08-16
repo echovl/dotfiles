@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+current_now="$(cat /sys/class/power_supply/BAT0/current_now)" 
+voltage_now="$(cat /sys/class/power_supply/BAT0/voltage_now)"
+
+echo $((current_now * voltage_now)) | awk '{printf "%.3f", $1 / 1e12}'
