@@ -22,3 +22,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 100
 
 vim.g.loaded_python3_provider = 0
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true

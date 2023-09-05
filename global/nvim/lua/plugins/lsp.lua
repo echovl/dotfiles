@@ -22,6 +22,9 @@ return {
 				tsserver = {},
 				rust_analyzer = {},
 				jsonls = {},
+				html = {},
+				emmet_language_server = {},
+				solidity_ls_nomicfoundation = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -119,6 +122,7 @@ return {
 				"isort",
 				"black",
 				"goimports",
+				"sql-formatter"
 			},
 		},
 		config = function(_, opts)
@@ -286,19 +290,19 @@ return {
 			history = true,
 			delete_check_events = "TextChanged",
 		},
-        -- stylua: ignore
-        keys = {
-            {
-                "<C-d>",
-                function()
-                    return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
-                end,
-                expr = true,
-                silent = true,
-                mode = "i",
-            },
-            { "<C-d>", function() require("luasnip").jump(1) end,  mode = "s" },
-            { "<C-b>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
-        },
+		-- stylua: ignore
+		keys = {
+			{
+				"<C-d>",
+				function()
+					return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
+				end,
+				expr = true,
+				silent = true,
+				mode = "i",
+			},
+			{ "<C-d>", function() require("luasnip").jump(1) end,  mode = "s" },
+			{ "<C-b>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
+		},
 	},
 }
