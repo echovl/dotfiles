@@ -1,0 +1,105 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": "auto", // Waybar height (to be removed for auto height)
+    "width": "auto", // Waybar width
+    "spacing": 5, // Gaps between modules (4px)
+    "margin-top": -20,
+    "margin-bottom": -5,
+    //"margin-top":5,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "backlight",
+        "battery"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "interval": 60,
+        "format": " {:%H:%M}",
+        "format-alt": " {:%a, %b %d %H:%M}",
+        "max-length": 25
+    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "max-length": 25
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            ""
+        ]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "0% ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
+    },
+    "hyprland/window": {
+        "format": " {class}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - fish": "> [$1]"
+        },
+        "separate-outputs": true
+    },
+    "network": {
+        "interface": "wlp0s20f3",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    }
+}
