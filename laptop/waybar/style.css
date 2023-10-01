@@ -17,25 +17,14 @@
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
 #tray,
-#mode,
-#idle_inhibitor,
-#custom-expand,
-#custom-cycle_wall,
-#custom-ss,
-#custom-dynamic_pill,
 #workspaces,
-#window,
-#mpd {
+#window {
   padding: 0 10px;
   border-radius: 15px;
   background: @base00;
   font-weight: bolder;
   color: @base0C;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
 }
 
 window#waybar {
@@ -58,10 +47,6 @@ window#waybar {
 }
 
 #workspaces {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 25px;
   font-weight: bolder;
 }
 
