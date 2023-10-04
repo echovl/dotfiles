@@ -21,7 +21,7 @@
 #workspaces,
 #window {
   padding: 0 10px;
-  border-radius: 15px;
+  border-radius: 8px;
   background: @base00;
   font-weight: bolder;
   color: @base0C;
