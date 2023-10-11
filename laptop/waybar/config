@@ -9,8 +9,8 @@
     "margin-left": 20,
     "margin-right": 20,
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "sway/workspaces",
+        "sway/window"
     ],
     "modules-right": [
         "network",
@@ -22,6 +22,10 @@
         "clock"
     ],
     // Modules configuration
+    "sway/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate"
@@ -83,12 +87,14 @@
             "Easy Effects Sink"
         ]
     },
+    "sway/window": {
+        "format": " {title}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
     "hyprland/window": {
         "format": " {class}",
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "🌎 $1",
-            "(.*) - fish": "> [$1]"
-        },
+        "max-length": 50,
         "separate-outputs": true
     },
     "network": {

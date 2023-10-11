@@ -22,7 +22,7 @@
 #tray,
 #workspaces,
 #window {
-  padding: 2px 10px;
+  padding: 4px 10px;
   border-radius: 8px;
   background: @base00;
   font-weight: bolder;
@@ -41,9 +41,10 @@ window#waybar {
 #workspaces button label {
   color: @base0C;
   font-weight: bolder;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
+#workspaces button.focused label,
 #workspaces button.active label {
   color: @base08;
   font-weight: bolder;
@@ -51,7 +52,7 @@ window#waybar {
 
 #workspaces {
   font-weight: bolder;
-  padding: 0;
+  padding: 0 2px;
 }
 
 #pulseaudio {
