@@ -4,6 +4,11 @@ return {
 		event = { "BufReadPost", "BufNewFile" },
 	},
 	{
+		"NvChad/nvim-colorizer.lua",
+		lazy = false,
+		opts = {},
+	},
+	{
 		"edkolev/tmuxline.vim",
 		lazy = false,
 	},

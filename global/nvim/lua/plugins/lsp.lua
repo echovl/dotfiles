@@ -156,7 +156,7 @@ return {
 					nls.builtins.formatting.prettierd,
 					nls.builtins.formatting.black,
 					nls.builtins.formatting.isort,
-					--nls.builtins.diagnostics.eslint_d,
+					-- nls.builtins.diagnostics.eslint_d,
 					nls.builtins.formatting.stylua,
 					nls.builtins.formatting.sql_formatter.with({
 						extra_args = { "-l", "postgresql" },
