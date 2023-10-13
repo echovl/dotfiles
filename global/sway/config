@@ -4,6 +4,28 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# Start flavours
+## Base16 Catppuccin Mocha
+# Author: https://github.com/catppuccin/catppuccin
+
+set $base00 #1e1e2e
+set $base01 #181825
+set $base02 #313244
+set $base03 #45475a
+set $base04 #585b70
+set $base05 #cdd6f4
+set $base06 #f5e0dc
+set $base07 #b4befe
+set $base08 #f38ba8
+set $base09 #fab387
+set $base0A #f9e2af
+set $base0B #a6e3a1
+set $base0C #94e2d5
+set $base0D #89b4fa
+set $base0E #cba6f7
+set $base0F #f2cdcd
+# End flavours
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -17,6 +39,8 @@ set $right l
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/Downloads/background33.jpg fill
+
+exec autotiling --limit 2
 
 # Set waybar as the bar
 bar {
@@ -33,11 +57,15 @@ input type:keyboard {
     xkb_options caps:ctrl_modifier
 }
 
+# Gaps
 gaps inner 10
 gaps outer 5
 gaps bottom 5
 
-default_border pixel 2
+# Border
+default_border pixel 1
+default_floating_border pixel 1
+client.focused $base09 $base0D $base0D $base09 $base09
 
 # Start a terminal
 bindsym $mod+Return exec alacritty
@@ -74,22 +102,12 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-# Or use $mod+[up|down|left|right]
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # Move the focused window with the same, but add Shift
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
-# Ditto, with arrow keys
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+$left mark swap, focus left, swap container with mark swap, focus left
+bindsym $mod+Shift+$down mark swap, focus down, swap container with mark swap, focus down
+bindsym $mod+Shift+$up mark swap, focus up, swap container with mark swap, focus up
+bindsym $mod+Shift+$right mark swap, focus right, swap container with mark swap, focus right
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
@@ -145,6 +163,9 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
+bindsym $mod+bracketleft exec wf-recorder -f ~/recordings//$(date +%s).mp4
+bindsym $mod+bracketright exec pkill wf-recorder
+
 mode "resize" {
 # left will shrink the containers width
 # right will grow the containers width
@@ -167,4 +188,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
