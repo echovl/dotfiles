@@ -123,8 +123,22 @@ bindkey '^ ' autosuggest-accept
 alias sudo='sudo -v; sudo '
 alias clipboard='xclip -selection clipboard'
 alias rtxx='eval "$(rtx activate zsh)"'
+alias task='go-task'
 
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+#bun completions
+[ -s "/home/echo/.bun/_bun" ] && source "/home/echo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# sway
+export GDK_BACKEND="wayland,x11"
+export QT_QPA_PLATFORM="wayland;xcb"
+export XDG_CURRENT_DESKTOP="sway"
+export GTK_THEME="Catppuccin-Mocha-Standard-Peach-Dark"
