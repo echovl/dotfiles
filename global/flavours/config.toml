@@ -14,12 +14,12 @@
 #
 # Example for i3
 #
-# [[item]]
-# file = '~/.config/i3/config'
-# template = 'i3'
-# subtemplate = 'colors'
-# hook = 'i3-msg reload'
-# rewrite = false
+[[item]]
+file = '~/.config/sway/config'
+template = 'sway'
+subtemplate = 'colors'
+hook = 'swaymsg reload'
+rewrite = false
 
 [[item]]
 file = '~/.config/alacritty.yml'
@@ -28,10 +28,29 @@ subtemplate = 'default-256'
 rewrite = false
 
 [[item]]
+file = '~/.config/kitty/kitty.conf'
+template = 'kitty'
+subtemplate = 'default-256'
+rewrite = false
+
+[[item]]
+file = '~/.Xresources'
+template = 'xresources'
+subtemplate = 'default-256'
+rewrite = false
+
+
+[[item]]
 file = '~/.config/polybar/colors.ini'
 template = 'polybar'
 rewrite = true
 hook = 'polybar-msg cmd restart &'
+
+[[item]]
+file = '~/.config/waybar/colors.css'
+template = 'waybar'
+rewrite = true
+hook = 'killall -SIGUSR2 waybar'
 
 # [[item]]
 # file = '~/.config/nvim/colors/flavours.lua'
