@@ -25,4 +25,3 @@ vim.keymap.set("n", "<C-j>", ":lnext<CR>")
 vim.keymap.set("n", "<C-k", ":lprev<CR>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true, replace_keycodes = false })

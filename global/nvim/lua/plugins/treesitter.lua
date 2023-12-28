@@ -6,6 +6,7 @@ return {
 		event = { "BufReadPost", "BufNewFile" },
 		opts = {
 			ensure_installed = "all",
+			ignore_install = { "comment" },
 			sync_install = false,
 			auto_install = true,
 			highlight = {

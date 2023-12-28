@@ -58,8 +58,11 @@ return {
 			-- keymaps
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
-					-- local client = vim.lsp.get_client_by_id(args.data.client_id)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
 					local keymap_opts = { buffer = args.buf, remap = false }
+
+					-- disable semantic tokens highlight
+					client.server_capabilities.semanticTokensProvider = nil
 
 					vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, keymap_opts)
 					vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, keymap_opts)
@@ -122,7 +125,7 @@ return {
 				"isort",
 				"black",
 				"goimports",
-				"sql-formatter"
+				"sql-formatter",
 			},
 		},
 		config = function(_, opts)
@@ -144,7 +147,7 @@ return {
 		end,
 	},
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = { "mason.nvim" },
 		opts = function()
@@ -240,7 +243,7 @@ return {
 					end, { "i", "s" }),
 				},
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp", max_item_count = 50 },
 					{ name = "nvim_lua" },
 					{ name = "path" },
 				}),
@@ -277,7 +280,6 @@ return {
 			extra_trigger_chars = { "(", "," },
 		},
 	},
-
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = {
